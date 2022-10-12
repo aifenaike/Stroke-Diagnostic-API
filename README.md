@@ -1,8 +1,8 @@
 # Stroke-Diagnostic-API
-An API for Machine Learning powered diagnosis of stroke patients. This project describes a step-by-step procedure for deploying a machine learning powered RestAPI for stroke diagnosis using FastAPI and Docker.
+This project describes a step-by-step procedure for deploying a machine learning powered RestAPI for stroke diagnosis using FastAPI and Docker.
 
 ## Motivation
-The  purpose  of this project is to create an API for accurate model diagnosis of `Stroke` using machine learning and individual patient's characteristics. Thus, providing useful information for the medical staff to deploy the needed treatment and decrease risks and consequences.
+The  purpose  of this project is to create an API for accurate medical diagnosis of `Stroke` using machine learning and individual patient's characteristics. Thus, providing useful information for the medical staff to deploy the needed treatment and decrease risks and consequences.
 
 Stroke is a condition that occurs when the blood supply to the brain is interrupted or reduced due to a blockage (ischemic stroke) or rupture of a blood vessel (hemorrhagic stroke). Without blood, the brain will not get oxygen and nutrients, so cells in some areas of the brain will die. This condition causes parts of the body controlled by the damaged area of the brain to not function properly.
 
