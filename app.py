@@ -3,7 +3,7 @@ import uvicorn
 import starlette.responses as _responses
 from fastapi.responses import JSONResponse
 from input_validation import *
-from utils import load_estimator
+from utils import load_estimator, correct
 
 import numpy as np
 import pandas as pd
@@ -38,12 +38,13 @@ def predict(gender:str,age:int,
             work_type:WorkType,Residence_type:str,
             avg_glucose_level:float,bmi: float,
             smoking_status:SmokingType):
+        
 
     df = pd.DataFrame({"gender":gender, "age":age, "hypertension":hypertension,
             "heart_disease":heart_disease, "ever_married":ever_married, "work_type":work_type,
             "Residence_type":Residence_type, "avg_glucose_level":avg_glucose_level, "bmi": bmi,
             "smoking_status":smoking_status},index=[0])
-
+    df = correct(df)
     preprocessor = load_estimator("preprocessing_pipeline.pkl")
     model = load_estimator("RandomForest.pkl")
     
