@@ -32,7 +32,7 @@ data = pd.read_csv("data/stroke_data.csv")
 data['age'] = data['age'].astype(np.int64)
 
 #seperate predictors from target feature.
-input_features = data.drop(['stroke'],1)
+input_features = data.drop(['stroke','id'],1)
 target = data['stroke']
 
 #split data into training and testing sets
@@ -42,8 +42,8 @@ Train, Test, train_target, test_target = train_test_split(input_features,target,
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder,OrdinalEncoder
 
-cat_encoder = ColumnTransformer(transformers = [("lb_encoder",OrdinalEncoder(),[1,5,7]),
-                                ('ohe_encoder', OneHotEncoder(),[6,10])],
+cat_encoder = ColumnTransformer(transformers = [("lb_encoder",OrdinalEncoder(),[0,4,6]),
+                                ('ohe_encoder', OneHotEncoder(),[5,9])],
                                 remainder ='passthrough')
 
 #Missing value imputation by mean
@@ -58,7 +58,7 @@ Train_features = preprocessing_pipeline.fit_transform(Train)
 Test_features = preprocessing_pipeline.transform(Test)
 
 #save pipeline
-save_estimator(file_name="preprocessing_pipeline",model=preprocessing_pipeline)
+save_estimator(file_name="preprocessing_pipeline.pkl",model=preprocessing_pipeline)
 
 #Oversampling the minority class
 from imblearn.over_sampling import SMOTE
@@ -79,6 +79,6 @@ print(f"Logloss for training set: {log_loss(train_target,train_predictions)}")
 print(f"Logloss for testing set: {log_loss(test_target,test_predictions)}")
 
 #save Model
-save_estimator(file_name="RandomForest",model=Rf_model)
+save_estimator(file_name="RandomForest.pkl",model=Rf_model)
 
 
