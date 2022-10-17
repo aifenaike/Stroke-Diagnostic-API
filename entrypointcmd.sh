@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#RUN_PORT=${PORT:-80}
+
+#/usr/local/bin/gunicorn --worker-tmp-dir /dev/shm -k uvicorn.workers.UvicornWorker main:app --bind "0.0.0.0:${RUN_PORT}"
+
+#uvicorn app:app --proxy-headers --port 80
+
+gunicorn --worker-tmp-dir /dev/shm --config gunicorn.conf.py app:app
