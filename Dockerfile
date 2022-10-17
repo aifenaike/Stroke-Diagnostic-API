@@ -12,4 +12,8 @@ RUN pip install -r requirements.txt
 # Copy the current directory contents into /app
 COPY . /app
 # Executing the container
-CMD ['python','app.py']
+#CMD ['python','app.py']
+
+RUN chmod +x entrypointcmd.sh
+
+CMD [ "./entrypointcmd.sh" ]
