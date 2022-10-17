@@ -31,17 +31,17 @@ class ValueRange:
 
 
 #===========To abstract dataframe in app.py=================
-# class input_data(BaseModel):
-#     gender:str,
-#     age:int,
-#     hypertension:Annotated[int, ValueRange(0, 1)],
-#     heart_disease:Annotated[int, ValueRange(0, 1)],
-#     ever_married:str,
-#     work_type:WorkType,
-#     Residence_type:str,
-#     avg_glucose_level:float,
-#     bmi: float,
-#     smoking_status:SmokingType,
+class input_data(BaseModel):
+    gender:str
+    age:int
+    hypertension:Annotated[int, ValueRange(0, 1)]
+    heart_disease:Annotated[int, ValueRange(0, 1)]
+    ever_married:str
+    work_type:WorkType
+    Residence_type:str
+    avg_glucose_level:float
+    bmi: float
+    smoking_status:SmokingType
 
 # data:input_data
 # data_dict = data.dict
