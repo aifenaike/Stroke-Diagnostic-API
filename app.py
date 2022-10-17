@@ -2,9 +2,8 @@ from fastapi import FastAPI, Request
 import uvicorn 
 import starlette.responses as _responses
 from fastapi.responses import JSONResponse
-from input_validation import *
+from input_validation import input_data
 from utilities.utils import load_estimator, run_inference
-
 import pandas as pd
 
 # Instatiate the FastAPI object
@@ -30,18 +29,9 @@ async def value_error_exception_handler(request: Request, exc: ValueError):
 
 #Prediction route
 @app.post("/predict")
-async def predict(gender:GenderType,age:int,
-            hypertension:Annotated[int, ValueRange(0, 1)],
-            heart_disease:Annotated[int, ValueRange(0, 1)],
-            ever_married:str,
-            work_type:WorkType,Residence_type:str,
-            avg_glucose_level:float,bmi: float,
-            smoking_status:SmokingType):
+async def predict(data: input_data):
         
-    df = pd.DataFrame({"gender":gender, "age":age, "hypertension":hypertension,
-            "heart_disease":heart_disease, "ever_married":ever_married, "work_type":work_type,
-            "Residence_type":Residence_type, "avg_glucose_level":avg_glucose_level, "bmi": bmi,
-            "smoking_status":smoking_status},index=[0])
+    df = pd.DataFrame(data.dict(),index=[0])
     preprocessor = load_estimator("preprocessing_pipeline.pkl")
     model = load_estimator("RandomForest.pkl")
     prediction = run_inference(preprocessor,model,df)
