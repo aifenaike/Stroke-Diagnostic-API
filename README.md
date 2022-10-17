@@ -69,7 +69,11 @@ The [stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-datas
 
 * You can build this docker image from the dockerfile using this command
 ```bash
-docker build -t stroke-diagnosis-api .
+docker build -t stroke-diagnosis ./app
+```
+* You can then run the dockerized application on local host using the command below:
+```bash
+docker run -p 80:80 stroke-diagnosis
 ```
 
 
