@@ -30,3 +30,69 @@ The [stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-datas
 | **bmi**   | body mass index      |
 | **smoking_status**   | `formerly smoked`, `never smoked`, `smokes` or `Unknown`     |
 | **stroke**   |  if the patient had a stroke or 0 if not    |
+
+
+## Project Directory 
+```bash
+.
+├── Models                              > main fastapi app
+│   ├── RandomForest.pkl                > pickled random forest model
+│   └── preprocessing_pipeline.pkl      > Pickled preprocessing pipeline
+├── data                                > Data directory
+│   ├── stroke_data.csv                 > stroke dataset
+├── test                                > set of tests
+│   ├── config_test.py                  > centralized data registry tests
+│   └── test_api_server.py              > FastAPI app tests
+│   └── test_inference.py               > test for prediction/inference
+│   └── test_preprocessing.py           > test for preprocessing pipeline
+├── utilities                           
+│   ├── utility.py                      > Script containing helper function used in modeling and preprocessing
+├── Dockerfile
+├── README.md                           > Documentation
+├── input_validation.py                 > pydantic driven input validation
+├── app.py                              > FastAPI app
+├── modeling.py                         > Model developmnet script
+├── requirements.txt                    > dependencies
+```
+
+## Benchmarks
+- Successfully created a RESTful API using FastAPI, implementing the following:
+  - A GET request on the root drives back to the `redocs` page by default.
+  - A POST request that does model inference.
+  - Type hinting was used.
+  - Use a Pydantic model to ingest the body from POST. This model should contain an example.
+  - Hint: the data has names with hyphens and Python does not allow those as variable names. We do not modify the column names in the csv and instead use the functionality of FastAPI/Pydantic/etc to deal with this.
+-  Several unit tests to test the API (one for the GET and two for POST, one that tests each prediction).
+
+
+## Build Docker Image
+
+* You can build this docker image from the dockerfile using this command
+```bash
+docker build -t stroke-diagnosis-api
+```
+
+
+## Technologies
+
+For project the following tech stack, APIs, architecture was used and applied: 
+
+* Python✅
+* FastAPI ✅
+* Docker Compose ✅
+* sklearn ✅
+
+## 1️⃣ UNIT TESTING
+
+* In order for the unit testing to be successful we used a  *json loading*, so that the code is not hard coded only for the provided given data. 
+
+* Therefore, during the unit testing (all the tests can be found under **/test**) we can now create *customer* and *loan* objects that are properly pushed to a local db (2 respective data tables). All the endpoints retrieve the necessary data from the provided json.
+
+## 🔮 FUTURE WORK 
+
+Feature Work would be 
+
+* To build more endpoints
+* To build an endpoint for extracting **feature importances** (eg. through the use of the LIME algorithm)
+* To optimise **machine learning models** by experimenting (by properly storing the experiment configurations and results eg. Spreadsheet) - DVC/MLflow integration
+
