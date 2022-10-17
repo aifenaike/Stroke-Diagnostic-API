@@ -7,7 +7,11 @@ from utilities.utils import load_estimator, run_inference
 import pandas as pd
 
 # Instatiate the FastAPI object
-app = FastAPI(debug=True)
+app = FastAPI(debug=True, title="fastapi-apptst",
+
+    version=0.1,
+
+    root_path="/")
 
 # @app.get('/')
 # def home():
