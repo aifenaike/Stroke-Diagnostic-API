@@ -69,7 +69,7 @@ The [stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-datas
 
 * You can build this docker image from the dockerfile using this command
 ```bash
-docker build -t stroke-diagnosis-api
+docker build -t stroke-diagnosis-api .
 ```
 
 
@@ -90,9 +90,9 @@ For project the following tech stack, APIs, architecture was used and applied:
 
 ## 🔮 FUTURE WORK 
 
-Feature Work would be 
+The areas of improvement in this projects includes:
 
 * To build more endpoints
 * To build an endpoint for extracting **feature importances** (eg. through the use of the LIME algorithm)
 * To optimise **machine learning models** by experimenting (by properly storing the experiment configurations and results eg. Spreadsheet) - DVC/MLflow integration
-
+* web Hosting 
