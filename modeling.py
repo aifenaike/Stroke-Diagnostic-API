@@ -32,7 +32,7 @@ data = pd.read_csv("data/stroke_data.csv")
 data['age'] = data['age'].astype(np.int64)
 
 #seperate predictors from target feature.
-input_features = data.drop(['stroke','id'],1)
+input_features = data.drop(['stroke'],1)
 target = data['stroke']
 
 #split data into training and testing sets
@@ -42,8 +42,8 @@ Train, Test, train_target, test_target = train_test_split(input_features,target,
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder,OrdinalEncoder
 
-cat_encoder = ColumnTransformer(transformers = [("lb_encoder",OrdinalEncoder(),[0,4,6]),
-                                ('ohe_encoder', OneHotEncoder(),[5,9])],
+cat_encoder = ColumnTransformer(transformers = [("lb_encoder",OrdinalEncoder(),[1,5,7]),
+                                ('ohe_encoder', OneHotEncoder(),[6,10])],
                                 remainder ='passthrough')
 
 #Missing value imputation by mean
