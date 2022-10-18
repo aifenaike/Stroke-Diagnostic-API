@@ -70,13 +70,14 @@ The [stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-datas
 * You can build this docker image from the dockerfile using this command
 ```bash
 cd app
+docker-compose up
+```
+* You can then run the dockerized application on local host via port 8000:
 
-docker build -t stroke-diagnosis .
-```
-* You can then run the dockerized application on local host using the command below:
-```bash
-docker run -p 80:80 stroke-diagnosis
-```
+```localhost:8000 This shows the documengtation page as default```
+
+* You can interact with the APi on localhost via:
+`localhost:8000/docs`
 
 
 ## Technologies
