@@ -36,7 +36,7 @@ The [stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-datas
 ```bash
 .
 ├── app
-    └── Models                              > main fastapi app
+    └── Models                              > model directory
         ├── RandomForest.pkl                > pickled random forest model
         └── preprocessing_pipeline.pkl      > Pickled preprocessing pipeline
     ├── utilities                           
@@ -45,7 +45,8 @@ The [stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-datas
     ├── docker-compose.yaml
     ├── input_validation.py                 > pydantic driven input validation
     ├── app.py                              > FastAPI app
-    └── modeling.py                         > Model developmnet script
+    ├── modeling.py                         > Model development script
+    └── requirements.txt                    > dependencies
 ├── data                                    > Data directory
 │   └── stroke_data.csv                     > stroke dataset
 ├── test                                    > set of tests
@@ -54,8 +55,7 @@ The [stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-datas
 │   ├── test_inference.py                   > test for prediction/inference
 │   └── test_preprocessing.py               > test for preprocessing pipeline
 │
-├── README.md                               > Documentation                       
-└── requirements.txt                        > dependencies
+├── README.md                               > Documentation  
 ```
 
 ## Benchmarks
