@@ -70,12 +70,15 @@ The [stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-datas
 
 ## Build Docker Image
 
-* You can create and start a container from the dockerfiles using this command
+* You can build an image, create and start a container from the dockerfiles using the following commands:
 ```bash
 cd app
 
-docker-compose up
+docker-compose up --build
 ```
+
+The command above finds docker-compose file, builds the image then make it running.
+
 * You can then access the API on local host via port 8000:
 
 ```localhost:8000 This shows the documengtation page as default```
