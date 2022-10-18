@@ -70,7 +70,7 @@ The [stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-datas
 
 ## Build Docker Image
 
-* You can build this docker image from the dockerfile using this command
+* You can create and start a container from the dockerfiles using this command
 ```bash
 cd app
 
