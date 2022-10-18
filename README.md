@@ -115,7 +115,7 @@ For project the following tech stack, APIs, architecture was used and applied:
 
 * In order for the unit testing to be successful we used a  *json loading*, so that the code is not hard coded only for the provided given data. 
 
-* Therefore, during the unit testing (all the tests can be found under **/test**) we can now create *customer* and *loan* objects that are properly pushed to a local db (2 respective data tables). All the endpoints retrieve the necessary data from the provided json.
+* Therefore, during the unit testing (all the tests can be found under **/test**) we can test patients data using specific json inputs. All the endpoints retrieve the necessary data from the provided json.
 
 ## 🔮 FUTURE WORK 
 
