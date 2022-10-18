@@ -76,11 +76,11 @@ cd app
 
 docker-compose up
 ```
-* You can then run the dockerized application on local host via port 8000:
+* You can then access the API on local host via port 8000:
 
 ```localhost:8000 This shows the documengtation page as default```
 
-* You can interact with the APi on localhost via:
+* You can interact with the API on localhost via:
 `localhost:8000/docs`
 
 
