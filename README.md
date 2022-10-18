@@ -81,7 +81,7 @@ The command above finds docker-compose file, builds the image then make it runni
 
 * You can then access the API on local host via port 8000:
 
-```localhost:8000 This shows the documengtation page as default```
+```localhost:8000``` This shows the documentation page as default
 
 * You can interact with the API on localhost via:
 `localhost:8000/docs`
