@@ -8,9 +8,9 @@ Stroke is a condition that occurs when the blood supply to the brain is interrup
 
 Stroke is an emergency condition that needs to be treated as soon as possible, because brain cells can die in just a matter of minutes. Prompt and appropriate treatment measures can minimize the level of brain damage and prevent possible complications.
 
-In this machine learning project, the overall objective is to develop a systme to predict the likelihood of a patient having a stroke based on several factors including: age, certain diseases (hypertension, heart disease). Thus helping medical professionals identify high risk patients.
+In this machine learning project, the overall objective is to develop a system to predict the likelihood of a patient having a stroke based on several factors including: age, certain diseases (hypertension, heart disease). Thus helping medical professionals identify high risk patients.
 
-As previously explained, stroke can kill the sufferer in a matter of minutes. Detecting stroke with the existing causative factors with the help of machine learning can be very useful in the world of health to detect stroke early in order to increase the sense of heart among sufferers so that strokes can be prevented early.
+As previously explained, stroke can kill a patient in a matter of minutes. Detecting stroke using the existing causative factors with the help of machine learning can be very useful to detect early tendecies of stroke in patients. 
 
 
 ## Dataset Description
@@ -73,6 +73,7 @@ The [stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-datas
 * You can build this docker image from the dockerfile using this command
 ```bash
 cd app
+
 docker-compose up
 ```
 * You can then run the dockerized application on local host via port 8000:
