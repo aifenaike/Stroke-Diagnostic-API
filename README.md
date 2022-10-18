@@ -84,6 +84,24 @@ docker-compose up
 `localhost:8000/docs`
 
 
+* Here are some screenshots:
+
+<p align="center">
+  <img width="600" height="400" src="https://github.com/aifenaike/Stroke-Diagnostic-API/blob/main/images/Screenshot%20(350).png">
+</p>
+
+
+<p align="center">
+  <img width="600" height="400" src="https://github.com/aifenaike/Stroke-Diagnostic-API/blob/main/images/Screenshot%20(351).png">
+</p>
+
+
+<p align="center">
+  <img width="600" height="400" src="https://github.com/aifenaike/Stroke-Diagnostic-API/blob/main/images/Screenshot%20(352).png">
+</p>
+
+* From the screenshot above, we diagnose a 24.4% tendency of having stroke.
+
 ## Technologies
 
 For project the following tech stack, APIs, architecture was used and applied: 
