@@ -35,24 +35,27 @@ The [stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-datas
 ## Project Directory 
 ```bash
 .
-├── Models                              > main fastapi app
-│   ├── RandomForest.pkl                > pickled random forest model
-│   └── preprocessing_pipeline.pkl      > Pickled preprocessing pipeline
-├── data                                > Data directory
-│   ├── stroke_data.csv                 > stroke dataset
-├── test                                > set of tests
-│   ├── config_test.py                  > centralized data registry tests
-│   └── test_api_server.py              > FastAPI app tests
-│   └── test_inference.py               > test for prediction/inference
-│   └── test_preprocessing.py           > test for preprocessing pipeline
-├── utilities                           
-│   ├── utility.py                      > Script containing helper function used in modeling and preprocessing
-├── Dockerfile
-├── README.md                           > Documentation
-├── input_validation.py                 > pydantic driven input validation
-├── app.py                              > FastAPI app
-├── modeling.py                         > Model developmnet script
-├── requirements.txt                    > dependencies
+├── app
+    └── Models                              > main fastapi app
+        ├── RandomForest.pkl                > pickled random forest model
+        └── preprocessing_pipeline.pkl      > Pickled preprocessing pipeline
+    ├── utilities                           
+    │   └── utility.py                      > Script containing helper function used in modeling and preprocessing
+    ├── Dockerfile
+    ├── docker-compose.yaml
+    ├── input_validation.py                 > pydantic driven input validation
+    ├── app.py                              > FastAPI app
+    └── modeling.py                         > Model developmnet script
+├── data                                    > Data directory
+│   └── stroke_data.csv                     > stroke dataset
+├── test                                    > set of tests
+│   ├── config_test.py                      > centralized data registry tests
+│   ├── test_api_server.py                  > FastAPI app tests
+│   ├── test_inference.py                   > test for prediction/inference
+│   └── test_preprocessing.py               > test for preprocessing pipeline
+│
+├── README.md                               > Documentation                       
+└── requirements.txt                        > dependencies
 ```
 
 ## Benchmarks
